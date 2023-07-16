@@ -29,3 +29,5 @@ export default function greeting(){
 	}
 	console.log(`Congratulations, ${name}!`);
 };
+
+greeting();
