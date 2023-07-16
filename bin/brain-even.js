@@ -23,7 +23,7 @@ export default function greeting(){
 		console.log('Correct!');
 	}else {
 		const opposite = (answerUser === 'yes' ? 'no' : 'yes');
-		const errorMessage = `"${answerUser}" is wrong answer ;(. Correct answer was '${opposite}'. /n Let's try again, ${name}!`;
+		const errorMessage = console.log(`"${answerUser}" is wrong answer ;(. Correct answer was '${opposite}'. /n Let's try again, ${name}!`);
 		return errorMessage;
 	  }
 	}
