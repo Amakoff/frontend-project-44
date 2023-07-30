@@ -2,10 +2,10 @@
 import readlineSync from 'readline-sync';
 export default function greeting(){
  console.log('Welcome to the Brain Games!');
- const name = readlineSync.question('May i have your name?');
+ const name = readlineSync.question('May I have your name? ');
 
  console.log(`Hello, ${name}!`);
- console.log('Answer "yes" if the number is even, otherwise answer "no".');
+ console.log("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
  const getRandomNum = (max) => {
 	return Math.floor(Math.random() * max); 
@@ -23,7 +23,7 @@ export default function greeting(){
 		console.log('Correct!');
 	}else {
 		const opposite = (answerUser === 'yes' ? 'no' : 'yes');
-		const errorMessage = console.log(`"${answerUser}" is wrong answer ;(. Correct answer was '${opposite}'. /n Let's try again, ${name}!`);
+		const errorMessage = console.log(`"${answerUser}" is wrong answer ;(. Correct answer was '${opposite}'. \nLet's try again, ${name}!`);
 		return errorMessage;
 	  }
 	}
