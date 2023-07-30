@@ -25,7 +25,7 @@ const calculateExpression = (number1, number2, operator) =>{
 const calculator = () =>{
 	console.log('Welcome to the Brain Games!');
 	
-	const name = readlineSync.question('May i have your name? ');
+	const name = readlineSync.question('May I have your name? ');
 	console.log(`Hello, ${name}!`);
 	console.log('What is the result of the expression?');
 	let isCorrect = true;
