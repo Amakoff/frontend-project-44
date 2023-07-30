@@ -13,7 +13,7 @@ export default function greeting(){
  for (let i = 0; i < 3; i += 1){
 
 	const number = getRandomNum(100);
-	console.log('Question: ', number);
+	console.log(`Question: ${number}`);
 	const answerUser = readlineSync.question('Your answer: ');
 
 	const check = (number % 2 === 0) && (answerUser === 'yes');
