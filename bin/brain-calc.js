@@ -9,8 +9,8 @@ const getRandomOperator = () => {
   return operators[randomIndex];
 };
 
-const calculateExpression = (number1, number2, operator) =>{
-  switch(operator){
+const calculateExpression = (number1, number2, operator) => {
+  switch(operator) {
     case '+':
       return number1 + number2;
     case '-':
@@ -22,13 +22,13 @@ const calculateExpression = (number1, number2, operator) =>{
   }
 };
 
-const calculator = () =>{
+const calculator = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('What is the result of the expression?');
   let isCorrect = true;
-  for (let i = 0; i < 3; i += 1){
+  for (let i = 0; i < 3; i += 1) {
     const number1 = getRandomNumber(1, 100);
     const number2 = getRandomNumber(1, 100);
     const operator = getRandomOperator();
