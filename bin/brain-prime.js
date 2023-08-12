@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-
 function isPrime(number) {
   if (number < 2) {
     return false;
@@ -18,7 +17,7 @@ function playPrimeGame() {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(
-    'Answer "yes" if given number is prime. Otherwise answer "no".'
+    'Answer "yes" if given number is prime. Otherwise answer "no".',
   );
   let correctAnswersCount = 0;
   while (correctAnswersCount < 3) {
