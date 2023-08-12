@@ -6,18 +6,16 @@ const greeting = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const getRandomNum = (max) => {
-    return Math.floor(Math.random() * max);
-};
-  for (let i = 0; i < 3; i += 1){
+  const getRandomNum = (max) => Math.floor(Math.random() * max);
+  for (let i = 0; i < 3; i += 1) {
     const number = getRandomNum(100);
     console.log(`Question: ${number}`);
     const answerUser = readlineSync.question('Your answer: ');
     const check = (number % 2 === 0) && (answerUser === 'yes');
     const check2 = (number % 2 !== 0) && (answerUser === 'no');
-    if(check === true || check2 === true) {
+    if (check === true || check2 === true) {
       console.log('Correct!');
-    }else {
+    } else {
       const opposite = (answerUser === 'yes' ? 'no' : 'yes');
       const errorMessage = console.log(`"${answerUser}" is wrong answer ;(. Correct answer was '${opposite}'. \nLet's try again, ${name}!`);
       return errorMessage;
