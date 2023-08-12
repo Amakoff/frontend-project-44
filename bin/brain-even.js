@@ -22,6 +22,7 @@ const greeting = () => {
     }
   }
   console.log(`Congratulations, ${name}!`);
+  return null;
 };
 
 greeting();
