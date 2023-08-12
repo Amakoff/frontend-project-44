@@ -20,10 +20,11 @@ const brainProgression = () => {
   };
 
   const hideNumber = (progression) => {
+    const newProgression = {...progression};
     const hiddenIndex = getRandomInt(0, progression.length - 1);
     const hiddenValue = progression[hiddenIndex];
-    progression[hiddenIndex] = '..';
-    return { progression, hiddenValue };
+    newProgression[hiddenIndex] = '..';
+    return { newProgression, hiddenValue };
   };
 
   let correctAnswersCount = 0;
@@ -33,7 +34,7 @@ const brainProgression = () => {
     const question = progression.join(' ');
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer == hiddenValue) {
+    if (userAnswer === hiddenValue) {
       console.log('Correct!');
       correctAnswersCount += 1;
     } else {
