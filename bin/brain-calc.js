@@ -10,7 +10,7 @@ const getRandomOperator = () => {
 };
 
 const calculateExpression = (number1, number2, operator) => {
-  switch(operator) {
+  switch (operator) {
     case '+':
       return number1 + number2;
     case '-':
@@ -36,16 +36,16 @@ const calculator = () => {
     const correctAnswer = calculateExpression(number1, number2, operator);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-  if(Number(userAnswer) !== correctAnswer) {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    console.log(`Let's try again, ${name}!`);
-    isCorrect = false;
-    break;
+    if (Number(userAnswer) !== correctAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
+      isCorrect = false;
+      break;
+    }
+    console.log('Correct!');
   }
-  console.log('Correct!');
-  }
-  if(isCorrect){
-  console.log(`Congratulations, ${name}!`);
+  if (isCorrect) {
+    console.log(`Congratulations, ${name}!`);
   }
 };
 calculator();
