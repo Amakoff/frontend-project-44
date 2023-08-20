@@ -5,6 +5,7 @@ const brainProgression = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
+  console.log('What number is missing in the progression?');
   const getRandomInt = (min, max) => {
     const minNum = Math.ceil(min);
     const maxNum = Math.floor(max);
