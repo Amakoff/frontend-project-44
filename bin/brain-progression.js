@@ -24,23 +24,23 @@ const brainProgression = () => {
       }
     }
     return [progression, hiddenNumber];
-};
-const playProgression = () => {
-  const length = getRandomInt(5, 10);
-  const start = getRandomInt(1, 10);
-  const step = getRandomInt(2, 5);
-  const hiddenIndex = getRandomInt(0, length - 1);
-  const [progression, hiddenNumber] = generateProgression(start, step, length, hiddenIndex);
-  console.log(`Question: ${progression.join(' ')}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (Number(answer) === hiddenNumber) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${hiddenNumber}'.`);
-  console.log(`Let's try again, ${name}!`);
-  return false;
-};
+  };
+  const playProgression = () => {
+    const length = getRandomInt(5, 10);
+    const start = getRandomInt(1, 10);
+    const step = getRandomInt(2, 5);
+    const hiddenIndex = getRandomInt(0, length - 1);
+    const [progression, hiddenNumber] = generateProgression(start, step, length, hiddenIndex);
+    console.log(`Question: ${progression.join(' ')}`);
+    const answer = readlineSync.question('Your answer: ');
+    if (Number(answer) === hiddenNumber) {
+      console.log('Correct!');
+      return true;
+    }
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${hiddenNumber}'.`);
+    console.log(`Let's try again, ${name}!`);
+    return false;
+  };
   let attempts = 3;
   while (attempts > 0) {
     const isCorrectAnswer = playProgression();
@@ -51,7 +51,7 @@ const playProgression = () => {
     }
   }
   if (attempts === 0) {
-  console.log(`Congratulations, ${name}!`);
+    console.log(`Congratulations, ${name}!`);
   }
 };
 brainProgression();
